@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSIONE: 700KM O MORTE</title>
+    <style>
+        :root {
+            --beer-gold: #f39c12;
+            --danger-red: #e74c3c;
+            --bg-overlay: rgba(0, 0, 0, 0.85);
+        }
+
+        body, html { 
+            margin: 0; padding: 0; height: 100%; 
+            font-family: 'Courier New', Courier, monospace; 
+            color: #eee; background-color: #000; 
+        }
+        
+        /* Sfondo personalizzato */
+        .background { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-image: url('https://i.postimg.cc/QN7cfdGz/file-00000000167071f4acee56d588fd0e3f.png'); 
+            background-size: cover; background-position: center; z-index: -2; 
+        }
+        .overlay { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%); z-index: -1; 
+        }
+
+        .container { 
+            max-width: 600px; margin: 40px auto; padding: 30px; 
+            background: var(--bg-overlay); border: 3px solid var(--beer-gold); 
+            border-radius: 2px; text-align: center; position: relative;
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+        }
+        
+        .top-secret { 
+            position: absolute; top: -10px; left: -10px; 
+            background: var(--danger-red); color: white; 
+            padding: 5px 15px; font-weight: bold; transform: rotate(-5deg); 
+            border: 1px solid white;
+        }
+
+        h1 { font-size: 2.2rem; color: var(--beer-gold); text-transform: uppercase; margin-bottom: 0; }
+        .target { font-size: 1.1rem; color: #aaa; margin-bottom: 30px; display: block; }
+
+        .briefing { 
+            text-align: left; background: #111; padding: 15px; 
+            border-left: 5px solid var(--beer-gold); margin-bottom: 30px; font-style: italic;
+        }
+
+        /* Alcool-ometro */
+        .gauge-container { margin: 30px 0; border: 1px solid #444; padding: 15px; border-radius: 5px; }
+        .gauge-label { display: block; margin-bottom: 10px; font-weight: bold; color: var(--beer-gold); }
+        .gauge-bar { 
+            background: #222; height: 30px; border-radius: 15px; 
+            overflow: hidden; border: 2px solid #555; position: relative;
+        }
+        .gauge-fill { 
+            background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71); 
+            width: 15%; /* Cambia questa % per far salire la barra */
+            height: 100%; transition: width 1.5s ease-in-out; 
+        }
+        .gauge-marks { display: flex; justify-content: space-between; font-size: 0.7rem; margin-top: 5px; color: #888; }
+
+        /* Costi */
+        .costs { width: 100%; border-collapse: collapse; margin: 20px 0; text-align: left; }
+        .costs td { padding: 8px; border-bottom: 1px solid #333; }
+        .price { color: var(--beer-gold); font-weight: bold; text-align: right; }
+
+        /* Pulsante d'assalto */
+        .btn-donate { 
+            display: block; background: var(--beer-gold); color: #000; 
+            padding: 20px; text-decoration: none; font-size: 1.5rem; 
+            font-weight: 900; border-radius: 5px; transition: 0.3s; 
+            margin-top: 20px; border-bottom: 5px solid #b7950b;
+        }
+        .btn-donate:hover { background: #fff; transform: scale(1.03); border-bottom: 5px solid #ccc; }
+
+        .footer { margin-top: 30px; font-size: 1.1rem; color: var(--danger-red); font-weight: bold; animation: blink 0.8s infinite; }
+        @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.2;} 100% {opacity: 1;} }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="top-secret">URGENTE</div>
+        
+        <h1>OPERAZIONE 700 KM</h1>
+        <span class="target">Obiettivo: Conoscere lei (senza sembrare un sociopatico)</span>
+        
+        <div class="briefing">
+            "Situazione: sono al verde e innamorato. Lei abita a 700km. Problema: senza alcol ho la scioltezza verbale di Raji di Big Bang Theory. Soluzione: servono fondi per treno e birre. Devo partire dignitosamente brillo per sopravvivere all'impatto."
+        </div>
+
+        <div class="gauge-container">
+            <span class="gauge-label">LIVELLO ANSIOLITICO ATTUALE</span>
+            <div class="gauge-bar">
+                <div class="gauge-fill"></div>
+            </div>
+            <div class="gauge-marks">
+                <span>Raji (Muto)</span>
+                <span>Dignitosamente Brillo</span>
+                <span>Casanova (Leggenda)</span>
+            </div>
+        </div>
+
+        <table class="costs">
+            <tr><td>Biglietto Treno (Tratta della speranza)</td><td class="price">€120</td></tr>
+            <tr><td>Cassa di Birra (Anestetico sociale)</td><td class="price">€25</td></tr>
+            <tr><td>Kebab tattico / Sopravvivenza</td><td class="price">€15</td></tr>
+        </table>
+
+        <p><small>Contribuisci a sbloccare le mie corde vocali.</small></p>
+
+        <a href="https://Paypal.me/diorazzocane" target="_blank" class="btn-donate">CACCIATE LA GRANA, STRONZI!</a>
+
+        <div class="footer">
+            NON FATE I TACCAGNI!
+        </div>
+    </div>
+
+</body>
+</html>

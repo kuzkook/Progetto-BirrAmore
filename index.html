@@ -18,18 +18,18 @@
         }
         
         /* Sfondo personalizzato */
-        .background { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-image: url('https://i.postimg.cc/QN7cfdGz/file-00000000167071f4acee56d588fd0e3f.png'); 
-            background-size: cover; 
-            background-position: center top; /* Questo la tiene centrata e allineata in alto */
-            background-repeat: no-repeat;
-            z-index: -2; 
-        }
+       .background {
+    position: absolute; /* 1. Cambiato da 'fixed' a 'absolute' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%; /* 2. Aumentato per coprire tutta l'altezza dello scroll */
+    background-image: url('https://i.postimg.cc/QN7cfdGz/file-00000000167071f4acee5d88fd0e3f.png');
+    background-size: auto 100%; /* 3. Cambiato per adattare l'immagine all'altezza della pagina, non alla larghezza */
+    background-position: center top; 
+    background-repeat: repeat-y; /* 4. Assicura che l'immagine si ripeta verso il basso */
+    z-index: -2;
+}
         .overlay { 
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
             background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); z-index: -1; 

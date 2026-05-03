@@ -19,13 +19,20 @@
         
         /* Sfondo personalizzato */
         .background { 
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
             background-image: url('https://i.postimg.cc/QN7cfdGz/file-00000000167071f4acee56d588fd0e3f.png'); 
-            background-size: cover; background-position: center; z-index: -2; 
+            background-size: cover; 
+            background-position: center top; /* Questo la tiene centrata e allineata in alto */
+            background-repeat: no-repeat;
+            z-index: -2; 
         }
         .overlay { 
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%); z-index: -1; 
+            background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); z-index: -1; 
         }
 
         .container { 

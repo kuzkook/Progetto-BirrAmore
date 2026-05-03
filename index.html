@@ -19,15 +19,15 @@
         
         /* Sfondo personalizzato */
        .background {
-    position: absolute; /* 1. Cambiato da 'fixed' a 'absolute' */
+    position: fixed; /* Lo blocca sullo schermo */
     top: 0;
     left: 0;
     width: 100%;
-    height: 300%; /* 2. Aumentato per coprire tutta l'altezza dello scroll */
+    height: 100%;
     background-image: url('https://i.postimg.cc/QN7cfdGz/file-00000000167071f4acee5d88fd0e3f.png');
-    background-size: contain;
-    background-position: center top; 
-    background-repeat: repeat-y; /* 4. Assicura che l'immagine si ripeta verso il basso */
+    background-size: cover; /* Riempie lo schermo senza deformarsi */
+    background-position: center center; /* Centra l'immagine sia in alto che ai lati */
+    background-repeat: no-repeat; /* Evita i tagli e le ripetizioni */
     z-index: -2;
 }
         .overlay { 
